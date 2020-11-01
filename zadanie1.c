@@ -2,8 +2,10 @@
 #include<stdlib.h>
 #include<math.h>
 
+#include"inputdanych.h" //plik nagłówkowy do pliku z funkcja do wprowadzania danych dla x,y,z;
 
-void wprowadzXYZ(double *, double *, double *);
+
+
 
 int main(){
 
@@ -14,15 +16,4 @@ int main(){
     return 0;
 }
 
-void wprowadzXYZ(double *px, double *py, double *pz){
-    double x, y, z;
-    printf("\nWprowadz Wartosc dla X: \n");
-    scanf("%lf", &x);
-    *px = x;
-    printf("\nWprowadz Wartosc dla Y: \n");
-    scanf("%lf", &y);
-    *py = y;
-    printf("\nWprowadz Wartosc dla Z: \n");
-    scanf("%lf", &z);
-    *pz = z;
-}
+
