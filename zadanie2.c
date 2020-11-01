@@ -30,7 +30,7 @@ int main(){
     y = wzor(x);  
     printf("\nWynik operacji : y=%lf", y);  
     getch();
-    getch();
+
     return 0;
 }
 
