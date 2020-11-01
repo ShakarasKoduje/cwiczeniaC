@@ -35,21 +35,21 @@ int main(){
 }
 
 double wzor(double x){
-    double b = -1.6, m = 0.9, n = -1.4, tmp;
+    double b = -1.6, m = 0.9, n = -1.4, abm=abs(b*m), tmp;
     double potega2X = pow(x, 2);
-    if(abs(b*m) > potega2X){
+    if( abm > potega2X){
         tmp = cos(n*x);
         tmp = b * m + tmp;
         tmp = sin(tmp);
         return tmp;
     }
-    else if(abs(b*m)< potega2X){
+    else if(abm< potega2X){
         tmp = sin(x);
         tmp = b*m-tmp;
         tmp = cos(tmp);
         return tmp;
     }
-    else if(abs(b*m)==potega2X){
+    else if(abm==potega2X){
         tmp = abs(b*m*x);
         tmp = sqrt(tmp);
         tmp = pow(M_E, abs(cos(x))) + tmp;
