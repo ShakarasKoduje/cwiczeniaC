@@ -14,7 +14,7 @@ int main(){
     wprowadzXYZ(&x, &y, &z);
     printf("\nWartosc x: %lf, y: %lf, z: %lf", x ,y ,z);
 
-    double minimum = mniejsza(x,y,z);
+    double minimum = minimalna(x+y,y-z);
     printf("\nMniejsza : %lf ", minimum);
     double maks = maksymalna(x,y);
     printf("\nWieksza : %lf ", maks);    

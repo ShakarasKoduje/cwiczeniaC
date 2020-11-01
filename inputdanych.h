@@ -2,5 +2,6 @@
 #include "porownaniewartosci.c"
 
 void wprowadzXYZ(double *, double *, double *);
-double mniejsza(double x, double y, double z);
+void wprowadzX(double *);
+double minimalna(double a, double b);
 double maksymalna(double x, double y);

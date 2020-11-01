@@ -15,3 +15,9 @@ void wprowadzXYZ(double *px, double *py, double *pz){
     *pz = z;
 }
 
+void wprowadzX(double *px){
+    double x;
+    printf("\nWprowadz Wartosc dla X: \n");
+    scanf("%lf", &x);
+    *px = x;
+}

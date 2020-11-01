@@ -1,30 +1,26 @@
 #include<stdlib.h>
 #include<stdio.h>
 
+double minimalna(double a, double b){
 
-
-double mniejsza(double x, double y, double z){
-
-    if(x+y < y-z){
-        printf("\n%lf + %lf, jest mniejsze od %lf - %lf", x,y,y,z);
-        return x+y;
+    if(a< b){
+        printf("\n%lf, jest mniejsze od %lf", a,b);
+        return a;
     }
-    else if (x+y>y-z)
+    else if (a>b)
     {
-        printf("\n%lf - %lf, jest mniejsze od %lf + %lf", y,z,x,y);
-        return y-z;
+        printf("\n%lf, jest mniejsze od %lf", b,a);
+        return b;
     }
-    else if (x+y == y-z)
+    else if (a == b)
     {
-        printf("\n%lf + %lf, jest rowne %lf - %lf", x,y,y,z);
-        return x+y;
+        printf("\n%lf, jest rowne %lf",a,b);
+        return a;
     }
     else printf("\nNieprawidlowe dane");
 
     return 0.0;
 }
-
-
 double maksymalna(double x, double y){
     if (x>y) return x;
     else if (y>x) return y;
