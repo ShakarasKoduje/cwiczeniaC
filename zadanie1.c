@@ -1,11 +1,12 @@
 #include<stdio.h>
 #include<stdlib.h>
+#define _USE_MATH_DEFINES //https://stackoverflow.com/questions/1727881/how-to-use-the-pi-constant-in-c/1727896
 #include<math.h>
 
 #include"inputdanych.h" //plik nagłówkowy do pliku z funkcja do wprowadzania danych dla x,y,z;
 
 
-
+void wzor(double x);
 
 int main(){
 
@@ -25,8 +26,34 @@ int main(){
         double m = minimum/maks;
         printf("m = %lf", m);
     }
-    
+    wprowadzX(&x);
+    printf("\nX: %lf", x);
+    wzor(x);    
     
     return 0;
 }
 
+void wzor(double x){
+    double a = 0.4, b=2.3, wartosc, y;
+
+
+    if (x <(a*3.5)){
+        wartosc = x * pow(M_E, 2*x);
+        wartosc = pow(cos(wartosc),2);
+        y = (a * b * x) - wartosc;
+        printf("\n Warunek x<a*3.5 spelniony, y=%lf", y);
+    }
+    else if(3.5*a <= x && x <= b){        
+        wartosc = pow(M_E, 2*x);
+        wartosc = wartosc + x;
+        wartosc = log(wartosc);
+        y = pow(a-x,2) - wartosc;
+        printf("\n Warunek 3.5*a<=x<=b spelniony, y=%lf", y);
+    }
+    else if(x > b){
+        wartosc = pow(M_E, 2*x);
+        y = (b*x) - a + (wartosc * pow(x,2));
+        y = sqrt(y);
+        printf("\n Warunek x>b spelniony, y=%lf", y);
+    }
+}
