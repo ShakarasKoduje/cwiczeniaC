@@ -14,3 +14,4 @@ void wprowadzXYZ(double *px, double *py, double *pz){
     scanf("%lf", &z);
     *pz = z;
 }
+
