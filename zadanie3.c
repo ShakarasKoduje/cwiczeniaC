@@ -9,7 +9,7 @@
 double wzor(double x, double z);
 
 int main(){
-    printf("Wprowadz wartosci dla zmiennych x, y, z.\n");
+    printf("Wprowadz wartosci dla zmiennych X, Y, Z.\n");
     double x,y,z,q;
     wprowadzXYZ(&x, &y, &z);
     printf("\nWartosc x: %lf, y: %lf, z: %lf", x ,y ,z);
